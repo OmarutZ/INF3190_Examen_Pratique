@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Quiz">
+    <meta name="author" content="Omar Zoui">
+    <title>Quiz</title>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+</head>
+
+<body>
+    <h1>Examen</h1>
+    <form action="/calcul_note" method="POST" onsubmit="return validerFormulaire()">
+        <div>
+            <label for="code" id="codeLabel">Code permanent: </label>
+            <input type="text" id="code" name="code">
+        </div>
+        <div>
+            <p id="labelQ1"><strong>1. Sélectionnez le meilleur élément pour contenir un bas de page avec beaucoup de
+                    liens parmi les
+                    éléments suivants : select, div, span, nav, section.</strong></p>
+            <ol>
+                <li><select id="q1" name="q1">
+                        <option value="select">select</option>
+                        <option value="div">div</option>
+                        <option value="span">span</option>
+                        <option value="nav">nav</option>
+                        <option value="section">section</option>
+                    </select></li>
+            </ol>
+        </div>
+        <div>
+            <p id="labelQ2"><strong>2. Entrez le nom de la propriété CSS servant à mettre le texte en gras.</strong></p>
+            <ol>
+                <li><input type="text" id="q2" name="q2"></li>
+            </ol>
+        </div>
+        <div>
+            <p id="labelQ3"><strong>3. Quelle est la priorité du sélecteur CSS suivant:</strong></p>
+            <pre>.content div.banner .dont-cheat-with-my-exam a</pre>
+            <ol>
+                <li><label><input type="radio" name="q3" value="a"> 0, 0, 2, 3</label></li>
+                <li><label><input type="radio" name="q3" value="b"> 0, 0, 3, 2</label></li>
+                <li><label><input type="radio" name="q3" value="c"> 0, 1, 2, 3</label></li>
+                <li><label><input type="radio" name="q3" value="d"> 0, 1, 3, 2</label></li>
+            </ol>
+        </div>
+        <div>
+            <p id="labelQ4"><strong>4. L'attribut "href" de la balise &lt;a> doit contenir:</strong></p>
+            <p><em>Ne cochez qu'une seule réponse.</em></p>
+            <ol>
+                <li><label><input type="checkbox" name="q4" value="url"> une URL</label></li>
+                <li><label><input type="checkbox" name="q4" value="image"> une image</label></li>
+                <li><label><input type="checkbox" name="q4" value="photo"> une photo</label></li>
+                <li><label><input type="checkbox" name="q4" value="texte"> un texte</label></li>
+            </ol>
+        </div>
+        <div>
+            <p id="labelQ5"><strong>5. Quelles sont les balises que l'on s'attend à retrouver dans un formulaire en
+                    général?</strong></p>
+            <p><em>Cochez toutes les réponses qui s'appliquent.</em></p>
+            <ol>
+                <li><label><input type="checkbox" name="q5" value="action"> action</label></li>
+                <li><label><input type="checkbox" name="q5" value="a"> a</label></li>
+                <li><label><input type="checkbox" name="q5" value="input"> input</label></li>
+                <li><label><input type="checkbox" name="q5" value="label"> label</label></li>
+            </ol>
+        </div>
+        <div>
+            <input type="submit" value="Corriger">
+        </div>
+    </form>
+</body>
+
+</html>
