@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    font-family: Inconsolata;
+}
+
+body {
+    background-color: #ffffe0;
+}
+
+ol {
+    list-style-type: none;
+}
